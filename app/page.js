@@ -1,28 +1,15 @@
-import { Suspense } from "react";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Problem from "@/components/Problem";
-import FeaturesAccordion from "@/components/FeaturesAccordion";
-import Pricing from "@/components/Pricing";
-import FAQ from "@/components/FAQ";
-import CTA from "@/components/CTA";
+import Dashboard from "@/components/Dashboard";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
-      <Suspense>
-        <Header />
-      </Suspense>
-      <main>
-        <Hero />
-        <Problem />
-        <FeaturesAccordion />
-        <Pricing />
-        <FAQ />
-        <CTA />
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-grow">
+        <Dashboard />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
