@@ -2,27 +2,22 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/app/icon.png";
 
-const Header = () => {
+export default function Header() {
   return (
-    <header className="bg-white shadow-sm">
-      <nav className="container flex items-center justify-between px-8 py-4 mx-auto">
-        <div className="flex lg:flex-1">
-          <Link className="flex items-center gap-2 shrink-0" href="/">
-            <Image
-              src={logo}
-              alt="MOS Dashboard logo"
-              className="w-8"
-              width={32}
-              height={32}
-            />
-            <span className="font-extrabold text-lg">MOS Dashboard</span>
-          </Link>
+    <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-background/80 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-8 h-16 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <Image
+            src="/images/logo 400.png"
+            alt="MOS"
+            width={32}
+            height={32}
+            className="w-8 h-8"
+          />
+          <h1 className="text-xl font-bold">mos</h1>
         </div>
-      </nav>
+      </div>
     </header>
   );
-};
-
-export default Header;
+}

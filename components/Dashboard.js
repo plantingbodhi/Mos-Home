@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiMoon, FiActivity, FiCoffee } from "react-icons/fi";
+import ButtonOutline from "./ButtonOutline";
 
 export default function Dashboard() {
   const recentMeals = [
@@ -11,7 +12,7 @@ export default function Dashboard() {
       title:
         "Boiled Egg (100g), Purple Cabbage (30g), Tomatoes (50g), Carrot Sticks (30g)",
       time: "about 2 hours ago",
-      image: "https://placehold.co/400x400/png",
+      image: "/images/meal1.jpg",
       nutrition: {
         calories: 185,
         protein: 15,
@@ -22,7 +23,7 @@ export default function Dashboard() {
     {
       title: "Pea Protein Powder (40g)",
       time: "about 2 hours ago",
-      image: "https://placehold.co/400x400/png",
+      image: "/images/meal2.jpg",
       nutrition: {
         calories: 160,
         protein: 32,
@@ -39,97 +40,102 @@ export default function Dashboard() {
           {/* Left Column - Profile and Stats */}
           <div className="space-y-8">
             {/* Profile Section */}
-            <div className="bg-card rounded-[32px] border border-border overflow-hidden">
-              <div className="h-[140px] bg-gradient-to-r from-[#4776E6] to-[#8E54E9]" />
-              <div className="-mt-[64px] px-8 pb-8">
-                <div className="mb-6">
-                  <div className="w-[128px] h-[128px] rounded-full border-4 border-white overflow-hidden">
-                    <Image
-                      src="https://placehold.co/400x400/png"
-                      alt="Profile"
-                      width={128}
-                      height={128}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+            <div className="bg-card rounded-[32px] p-8 border-2 border-black">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-black mb-4">
+                  <Image
+                    src="/images/profile.png"
+                    alt="Profile"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h1 className="text-[32px] font-bold text-foreground leading-tight mb-2">
-                  Marc Lou
-                </h1>
-                <p className="text-[20px] text-[#6B7280] mb-8">
-                  Just settings up this app, no idea what I&apos;m doing really.
+                <h2 className="text-2xl font-bold mb-2">Bodhi</h2>
+                <p className="text-muted-foreground mb-6">
+                  Building mos so we can remember, connect, and create bliss
+                  together. IRL offerings available and digital tools coming
+                  soon.
                 </p>
-                <div className="flex gap-16">
-                  <div>
-                    <div className="text-[32px] font-bold leading-none mb-1">
-                      27
-                    </div>
-                    <div className="text-[16px] text-[#6B7280]">Bio age</div>
-                  </div>
-                  <div>
-                    <div className="text-[32px] font-bold leading-none mb-1">
-                      0.84
-                    </div>
-                    <div className="text-[16px] text-[#6B7280]">
-                      Aging speed
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-[32px] font-bold leading-none mb-1">
-                      —
-                    </div>
-                    <div className="text-[16px] text-[#6B7280]">Rank</div>
-                  </div>
+
+                {/* Buttons */}
+                <div className="w-full grid grid-cols-2 gap-3">
+                  <ButtonOutline title="What is Mos?" />
+                  <ButtonOutline title="Explore Offerings" />
                 </div>
               </div>
             </div>
 
             {/* Today's Stats */}
-            <div className="bg-card rounded-3xl p-8 border border-border">
+            <div className="bg-card rounded-[32px] p-8 border-2 border-black">
               <h2 className="text-xl font-bold mb-6">Today</h2>
               <div className="space-y-6">
                 <div>
                   <div className="flex justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <FiMoon className="text-blue-400" />
-                      <span>Sleep</span>
+                      <div className="w-6 h-6">
+                        <Image
+                          src="/images/mystery icon.png"
+                          alt="Mystery"
+                          width={24}
+                          height={24}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <span>Mystery</span>
                     </div>
                     <div className="text-muted-foreground">
                       8h 20m <span className="opacity-50">/ 7h 0m</span>
                     </div>
                   </div>
-                  <div className="h-2 bg-blue-100 rounded-full overflow-hidden">
-                    <div className="h-full w-[100%] bg-blue-400 rounded-full" />
+                  <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="h-full w-[119%] bg-black rounded-full" />
                   </div>
                 </div>
 
                 <div>
                   <div className="flex justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <FiActivity className="text-green-400" />
-                      <span>Burned</span>
+                      <div className="w-6 h-6">
+                        <Image
+                          src="/images/sanctity icon.png"
+                          alt="Sanctity"
+                          width={24}
+                          height={24}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <span>Sanctity</span>
                     </div>
                     <div className="text-muted-foreground">
                       817 kcal <span className="opacity-50">/ 500 kcal</span>
                     </div>
                   </div>
-                  <div className="h-2 bg-green-100 rounded-full overflow-hidden">
-                    <div className="h-full w-[100%] bg-green-400 rounded-full" />
+                  <div className="h-2 bg-[#d988d7]/20 rounded-full overflow-hidden">
+                    <div className="h-full w-[163%] bg-[#d988d7] rounded-full" />
                   </div>
                 </div>
 
                 <div>
                   <div className="flex justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <FiCoffee className="text-red-400" />
-                      <span>Intake</span>
+                      <div className="w-6 h-6">
+                        <Image
+                          src="/images/odyssey icon.png"
+                          alt="Odyssey"
+                          width={24}
+                          height={24}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                      <span>Odyssey</span>
                     </div>
                     <div className="text-muted-foreground">
                       815 kcal <span className="opacity-50">/ 3000 kcal</span>
                     </div>
                   </div>
-                  <div className="h-2 bg-red-100 rounded-full overflow-hidden">
-                    <div className="h-full w-[27%] bg-red-400 rounded-full" />
+                  <div className="h-2 bg-white rounded-full overflow-hidden border-2 border-black">
+                    <div className="h-full w-[27%] bg-transparent border-r-2 border-black" />
                   </div>
                 </div>
               </div>
@@ -139,67 +145,83 @@ export default function Dashboard() {
           {/* Right Column - Recent Activity */}
           <div className="md:col-span-2">
             <h2 className="text-2xl font-bold mb-6">Recent activity</h2>
-            <div className="space-y-6">
+            <div className="space-y-6 relative">
+              {/* Timeline line */}
+              <div className="absolute left-[15px] top-[24px] bottom-0 w-[2px] bg-black/10" />
+
               {recentMeals.map((meal, index) => (
-                <div key={index}>
-                  <div className="text-sm text-muted-foreground mb-2">
-                    {meal.time}
+                <div key={index} className="relative">
+                  {/* Timeline logo dot */}
+                  <div className="absolute left-0 top-[12px]">
+                    <Image
+                      src="/images/logo 60.png"
+                      alt="Timeline marker"
+                      width={30}
+                      height={30}
+                      className="w-[30px] h-[30px]"
+                    />
                   </div>
-                  <div className="bg-card rounded-3xl p-6 border border-border">
-                    <div className="flex gap-6">
-                      <div className="w-32 h-32 bg-muted rounded-2xl overflow-hidden shrink-0">
-                        <Image
-                          src={meal.image}
-                          alt={meal.title}
-                          width={128}
-                          height={128}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-grow">
-                        <h3 className="font-medium mb-4">{meal.title}</h3>
-                        <div className="flex gap-6">
-                          <div className="flex items-center gap-2">
-                            <span className="text-orange-500">🔥</span>
-                            <div>
-                              <div className="font-bold">
-                                {meal.nutrition.calories}
-                              </div>
-                              <div className="text-sm text-muted-foreground">
-                                calories
-                              </div>
-                            </div>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span>🍖</span>
-                            <div>
-                              <div className="font-bold">
-                                {meal.nutrition.protein}g
-                              </div>
-                              <div className="text-sm text-muted-foreground">
-                                protein
+
+                  <div className="pl-12">
+                    <div className="text-sm text-muted-foreground mb-2">
+                      {meal.time}
+                    </div>
+                    <div className="bg-card rounded-[32px] p-6 border-2 border-black">
+                      <div className="flex gap-6">
+                        <div className="w-32 h-32 bg-muted rounded-2xl overflow-hidden shrink-0">
+                          <Image
+                            src={meal.image}
+                            alt={meal.title}
+                            width={128}
+                            height={128}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="flex-grow">
+                          <h3 className="font-medium mb-4">{meal.title}</h3>
+                          <div className="flex gap-6">
+                            <div className="flex items-center gap-2">
+                              <span className="text-orange-500">🔥</span>
+                              <div>
+                                <div className="font-bold">
+                                  {meal.nutrition.calories}
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  calories
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span>⚪️</span>
-                            <div>
-                              <div className="font-bold">
-                                {meal.nutrition.carbs}g
-                              </div>
-                              <div className="text-sm text-muted-foreground">
-                                carbs
+                            <div className="flex items-center gap-2">
+                              <span>🍖</span>
+                              <div>
+                                <div className="font-bold">
+                                  {meal.nutrition.protein}g
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  protein
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span>🫒</span>
-                            <div>
-                              <div className="font-bold">
-                                {meal.nutrition.fat}g
+                            <div className="flex items-center gap-2">
+                              <span>⚪️</span>
+                              <div>
+                                <div className="font-bold">
+                                  {meal.nutrition.carbs}g
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  carbs
+                                </div>
                               </div>
-                              <div className="text-sm text-muted-foreground">
-                                fat
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <span>🫒</span>
+                              <div>
+                                <div className="font-bold">
+                                  {meal.nutrition.fat}g
+                                </div>
+                                <div className="text-sm text-muted-foreground">
+                                  fat
+                                </div>
                               </div>
                             </div>
                           </div>
