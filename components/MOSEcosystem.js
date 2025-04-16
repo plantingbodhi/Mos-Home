@@ -4,8 +4,8 @@ import { useRef } from "react";
 
 export default function MOSEcosystem({ ecosystemRef }) {
   return (
-    <section ref={ecosystemRef} className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-8">
+    <section ref={ecosystemRef} className="pt-24 bg-white">
+      <div className="max-w-6xl mx-auto px-8">
         <h2 className="text-3xl font-bold text-center mb-4">
           The MOS Ecosystem
         </h2>
@@ -100,7 +100,7 @@ export default function MOSEcosystem({ ecosystemRef }) {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-24 text-center mb-24">
           <h2 className="text-3xl font-bold mb-8">The Vision of MOS</h2>
           <p className="text-lg text-center mb-6">
             What if the world was built from the inside out?

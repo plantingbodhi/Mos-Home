@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function WhatIsMOS() {
   return (
-    <section className="py-16 bg-white">
+    <section className="pt-16 pb-24 bg-white">
       <div className="max-w-7xl mx-auto px-8">
         <h2 className="text-3xl font-bold text-center mb-4">What is MOS?</h2>
         <p className="text-lg text-center mb-8">
@@ -25,7 +25,7 @@ export default function WhatIsMOS() {
             </div>
             <div className="flex flex-col justify-center">
               <p className="text-lg mb-6">
-                You are not alone in what you&apos;re feeling. Something deep is
+                You're not alone in what you&apos;re feeling. Something deep is
                 stirring, in the world and within you. We&apos;re living through
                 a collective remembering. Old systems are breaking. Truth is
                 rising. And many are waking up without a clear path to walk.

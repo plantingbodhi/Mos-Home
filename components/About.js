@@ -6,6 +6,13 @@ import ButtonOutline from "./ButtonOutline";
 export default function About() {
   return (
     <div className="bg-white max-w-7xl mx-auto px-8">
+      <h2 className="text-3xl font-bold text-center mb-4">
+        In Service of the Sacred
+      </h2>
+      <p className="text-lg text-center mb-8">
+        Offerings born from my own life of lessons — here to support yours.
+      </p>
+
       <div className="p-6">
         <div className="border-2 border-black rounded-[32px] p-6">
           {/* Top 2/3 Section */}
