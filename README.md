@@ -1,3 +1,42 @@
+# Mos Home
+
+A modern web application for managing and tracking your MOS activities and aspects.
+
+## Features
+
+- Activity tracking
+- MOS aspect management
+- User profile
+- Dashboard with statistics
+- Modern UI with dark/light mode support
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Learn More
+
+This project is built with:
+
+- Next.js
+- Tailwind CSS
+- Supabase
+- TypeScript
+
+## License
+
+This project is licensed under the terms of your license agreement with ShipFast.
+
 # ShipFast — Javascript
 
 Hey maker 👋 it's Marc from [ShipFast](https://shipfa.st/docs). Let's get your startup off the ground, FAST ⚡️
@@ -14,10 +53,10 @@ Hey maker 👋 it's Marc from [ShipFast](https://shipfa.st/docs). Let's get your
 
 ## Links
 
--   [📚 Documentation](https://shipfa.st/docs)
--   [📣 Updates](https://shipfast.beehiiv.com/)
--   [🧑‍💻 Discord](https://shipfa.st/dashboard)
--   [🥇 Leaderboard](https://shipfa.st/leaderboard)
+- [📚 Documentation](https://shipfa.st/docs)
+- [📣 Updates](https://shipfast.beehiiv.com/)
+- [🧑‍💻 Discord](https://shipfa.st/dashboard)
+- [🥇 Leaderboard](https://shipfa.st/leaderboard)
 
 ## Support
 
@@ -29,9 +68,9 @@ Let's ship it, FAST ⚡️
 
 **📈 Grow your startup with [DataFast](https://datafa.st?ref=shipfast_readme)**
 
--   Analyze your traffic
--   Get insights on your customers
--   Make data-driven decisions
+- Analyze your traffic
+- Get insights on your customers
+- Make data-driven decisions
 
 ShipFast members get 30% OFF on all plans! 🎁
 
