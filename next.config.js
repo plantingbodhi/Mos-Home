@@ -14,6 +14,7 @@ const nextConfig = {
       "logos-world.net",
       "placehold.co",
       "cwkokjxznczqdzrqfcpt.supabase.co",
+      "qgmjmhxeqzmqrqbpvqhh.supabase.co",
     ],
   },
 };
