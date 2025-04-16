@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  devIndicators: {
+    buildActivity: false,
+    buildActivityPosition: "bottom-left",
+  },
   images: {
     domains: [
       // NextJS <Image> component needs to whitelist domains for src={}

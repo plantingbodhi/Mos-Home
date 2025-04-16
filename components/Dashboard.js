@@ -1,15 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiMoon, FiActivity, FiCoffee } from "react-icons/fi";
 import ButtonOutline from "./ButtonOutline";
 import { getActivities, createTestActivities } from "@/libs/supabase";
+import WhatIsMOS from "./WhatIsMOS";
 
 export default function Dashboard() {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
+  const whatIsMOSRef = useRef(null);
 
   useEffect(() => {
     async function initializeActivities() {
@@ -31,8 +33,13 @@ export default function Dashboard() {
     initializeActivities();
   }, []);
 
+  const scrollToWhatIsMOS = () => {
+    whatIsMOSRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      {/* Dashboard Content */}
       <div className="p-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -59,7 +66,10 @@ export default function Dashboard() {
 
                   {/* Buttons */}
                   <div className="w-full grid grid-cols-2 gap-3">
-                    <ButtonOutline title="What is Mos?" />
+                    <ButtonOutline
+                      title="What is Mos?"
+                      onClick={scrollToWhatIsMOS}
+                    />
                     <ButtonOutline title="Explore Offerings" />
                   </div>
                 </div>
@@ -232,6 +242,11 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* WhatIsMOS Section */}
+      <div ref={whatIsMOSRef}>
+        <WhatIsMOS />
       </div>
     </div>
   );
