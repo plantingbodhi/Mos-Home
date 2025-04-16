@@ -7,11 +7,13 @@ import { FiMoon, FiActivity, FiCoffee } from "react-icons/fi";
 import ButtonOutline from "./ButtonOutline";
 import { getActivities, createTestActivities } from "@/libs/supabase";
 import WhatIsMOS from "./WhatIsMOS";
+import MOSEcosystem from "./MOSEcosystem";
 
 export default function Dashboard() {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
   const whatIsMOSRef = useRef(null);
+  const ecosystemRef = useRef(null);
 
   useEffect(() => {
     async function initializeActivities() {
@@ -35,6 +37,10 @@ export default function Dashboard() {
 
   const scrollToWhatIsMOS = () => {
     whatIsMOSRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToEcosystem = () => {
+    ecosystemRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -70,7 +76,10 @@ export default function Dashboard() {
                       title="What is Mos?"
                       onClick={scrollToWhatIsMOS}
                     />
-                    <ButtonOutline title="Explore Offerings" />
+                    <ButtonOutline
+                      title="Explore Offerings"
+                      onClick={scrollToEcosystem}
+                    />
                   </div>
                 </div>
               </div>
@@ -247,6 +256,11 @@ export default function Dashboard() {
       {/* WhatIsMOS Section */}
       <div ref={whatIsMOSRef}>
         <WhatIsMOS />
+      </div>
+
+      {/* MOS Ecosystem Section */}
+      <div ref={ecosystemRef}>
+        <MOSEcosystem />
       </div>
     </div>
   );

@@ -1,174 +1,117 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 export default function WhatIsMOS() {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const expandedContentRef = useRef(null);
-  const buttonRef = useRef(null);
-  const [isInitialLoad, setIsInitialLoad] = useState(true);
-
-  const handleExpand = () => {
-    setIsExpanded(!isExpanded);
-    setIsInitialLoad(false);
-  };
-
-  useEffect(() => {
-    // Only scroll if it's not the initial load and the user has interacted with the component
-    if (!isInitialLoad) {
-      if (isExpanded && expandedContentRef.current) {
-        // Small delay to ensure the content is rendered
-        setTimeout(() => {
-          expandedContentRef.current.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }, 50);
-      } else if (!isExpanded && buttonRef.current) {
-        // Scroll back to the button when collapsing
-        setTimeout(() => {
-          buttonRef.current.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-          });
-        }, 50);
-      }
-    }
-  }, [isExpanded, isInitialLoad]);
-
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">What is MOS?</h2>
+    <div className="bg-white max-w-3xl mx-auto p-6">
+      <h2 className="text-3xl font-bold text-center mb-4">What is MOS?</h2>
+      <p className="text-lg text-center mb-8">
+        A sacred system for remembering who you are.
+      </p>
 
-        <div className="border border-black rounded-lg p-6">
-          <p className="text-lg mb-4 text-center">
-            A sacred system for remembering who you are.
+      <div className="border-2 border-black rounded-[32px] p-6">
+        <div className="text-lg font-bold mb-8 text-center">
+          MOS is made of three principles:
+        </div>
+        <div className="flex items-center justify-center gap-2 mb-8">
+          <div className="w-6 h-6">
+            <Image
+              src="/images/mystery icon.png"
+              alt="Mystery"
+              width={24}
+              height={24}
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <span>Mystery</span>
+          <span className="mx-2">–</span>
+          <div className="w-6 h-6">
+            <Image
+              src="/images/odyssey icon.png"
+              alt="Odyssey"
+              width={24}
+              height={24}
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <span>Odyssey</span>
+          <span className="mx-2">–</span>
+          <div className="w-6 h-6">
+            <Image
+              src="/images/sanctity icon.png"
+              alt="Sanctity"
+              width={24}
+              height={24}
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <span>Sanctity</span>
+        </div>
+        <p className="text-lg mb-8 text-center">
+          That&apos;s how we listen, create, and connect.
+        </p>
+
+        <div className="border-t-2 border-black pt-6">
+          <p className="text-lg font-bold mb-4 text-center">MOS is a map.</p>
+          <p className="text-lg mb-8 text-center">
+            A way to navigate your life through clarity, action, and love.
           </p>
-          <div className="text-lg mb-4 text-center">
-            MOS is made of three principles: <br />
-            <div className="flex items-center justify-center gap-2 mt-2">
-              <div className="w-6 h-6">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Mystery */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 mb-4">
                 <Image
                   src="/images/mystery icon.png"
                   alt="Mystery"
-                  width={24}
-                  height={24}
+                  width={48}
+                  height={48}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span>Mystery</span>
-              <span className="mx-2">–</span>
-              <div className="w-6 h-6">
+              <h3 className="text-xl font-bold mb-2">Mystery</h3>
+              <p className="text-lg">To observe. To feel. To become aware.</p>
+            </div>
+
+            {/* Odyssey */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 mb-4">
                 <Image
                   src="/images/odyssey icon.png"
                   alt="Odyssey"
-                  width={24}
-                  height={24}
+                  width={48}
+                  height={48}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span>Odyssey</span>
-              <span className="mx-2">–</span>
-              <div className="w-6 h-6">
+              <h3 className="text-xl font-bold mb-2">Odyssey</h3>
+              <p className="text-lg">
+                To walk the path, share your gift, meet your challenge.
+              </p>
+            </div>
+
+            {/* Sanctity */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-12 h-12 mb-4">
                 <Image
                   src="/images/sanctity icon.png"
                   alt="Sanctity"
-                  width={24}
-                  height={24}
+                  width={48}
+                  height={48}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span>Sanctity</span>
+              <h3 className="text-xl font-bold mb-2">Sanctity</h3>
+              <p className="text-lg">To remember that you are not alone.</p>
             </div>
           </div>
-          <p className="text-lg mb-6 text-center">
-            That&apos;s how we listen, create, and connect.
+
+          <p className="text-lg text-center mt-8">
+            It is a rhythm. A ritual. A system.
           </p>
-
-          <div className="text-center">
-            <button
-              ref={buttonRef}
-              onClick={handleExpand}
-              className="inline-flex items-center text-lg font-medium hover:underline"
-            >
-              {isExpanded ? "↑ Collapse" : "→ Expand"}
-            </button>
-          </div>
-
-          <AnimatePresence>
-            {isExpanded && (
-              <motion.div
-                ref={expandedContentRef}
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="overflow-hidden mt-6"
-              >
-                <div className="border-t border-black pt-6">
-                  <p className="text-lg mb-4 text-center">MOS is a map.</p>
-                  <p className="text-lg mb-4 text-center">
-                    A way to navigate your life through clarity, action, and
-                    love.
-                  </p>
-                  <div className="text-lg mb-4 text-center">
-                    <div className="flex items-center justify-center gap-2 mb-2">
-                      <div className="w-6 h-6">
-                        <Image
-                          src="/images/mystery icon.png"
-                          alt="Mystery"
-                          width={24}
-                          height={24}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                      <span className="font-medium">Mystery</span>
-                    </div>
-                    To observe. To feel. To become aware.
-                  </div>
-                  <div className="text-lg mb-4 text-center">
-                    <div className="flex items-center justify-center gap-2 mb-2">
-                      <div className="w-6 h-6">
-                        <Image
-                          src="/images/odyssey icon.png"
-                          alt="Odyssey"
-                          width={24}
-                          height={24}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                      <span className="font-medium">Odyssey</span>
-                    </div>
-                    To walk the path, share your gift, meet your challenge.
-                  </div>
-                  <div className="text-lg mb-4 text-center">
-                    <div className="flex items-center justify-center gap-2 mb-2">
-                      <div className="w-6 h-6">
-                        <Image
-                          src="/images/sanctity icon.png"
-                          alt="Sanctity"
-                          width={24}
-                          height={24}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                      <span className="font-medium">Sanctity</span>
-                    </div>
-                    To remember that you are not alone.
-                  </div>
-                  <p className="text-lg text-center">
-                    It is a rhythm. A ritual. A system. <br />
-                    It&apos;s how we create the sacred internet, together.
-                  </p>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
