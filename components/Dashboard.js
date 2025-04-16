@@ -7,12 +7,12 @@ import { FiMoon, FiActivity, FiCoffee } from "react-icons/fi";
 import ButtonOutline from "./ButtonOutline";
 import { getActivities, createTestActivities } from "@/libs/supabase";
 import WhatIsMOS from "./WhatIsMOS";
+import About from "./About";
 import MOSEcosystem from "./MOSEcosystem";
 
 export default function Dashboard() {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
-  const whatIsMOSRef = useRef(null);
   const ecosystemRef = useRef(null);
 
   useEffect(() => {
@@ -35,16 +35,45 @@ export default function Dashboard() {
     initializeActivities();
   }, []);
 
-  const scrollToWhatIsMOS = () => {
-    whatIsMOSRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   const scrollToEcosystem = () => {
     ecosystemRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="min-h-screen bg-background">
+      {/* The Way of MOS in Action */}
+      <div className="p-8 pb-0">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4">
+            The Way of Mos
+          </h2>
+          <p className="text-lg text-center mb-8">
+            There&apos;s no one way to walk the Way.
+          </p>
+
+          <div className="border-2 border-black rounded-[32px] p-6">
+            <div className="space-y-8">
+              <p className="text-lg text-center">
+                Mos isn&apos;t a rigid method — it&apos;s a living system. You
+                can start with Mystery, move through Odyssey, or rest in
+                Sanctity. Or live all three in a single breath. Some come for
+                stillness. Some to create. Some to heal.
+              </p>
+
+              <p className="text-lg text-center">
+                Mos takes form — not just as an idea, but as something you can
+                use. A simple way to see where you are, and return to what
+                matters.
+              </p>
+
+              <p className="text-lg text-center">
+                It adapts to you. To your life, your season, your soul.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Dashboard Content */}
       <div className="p-8">
         <div className="max-w-7xl mx-auto">
@@ -74,7 +103,12 @@ export default function Dashboard() {
                   <div className="w-full grid grid-cols-2 gap-3">
                     <ButtonOutline
                       title="What is Mos?"
-                      onClick={scrollToWhatIsMOS}
+                      onClick={() => {
+                        window.scrollTo({
+                          top: 0,
+                          behavior: "smooth",
+                        });
+                      }}
                     />
                     <ButtonOutline
                       title="Explore Offerings"
@@ -162,7 +196,7 @@ export default function Dashboard() {
 
             {/* Right Column - Recent Activity */}
             <div className="md:col-span-2">
-              <h2 className="text-2xl font-bold mb-6">Recent activity</h2>
+              <h2 className="text-2xl font-bold mb-6">Mos in action</h2>
               <div className="space-y-6 relative">
                 {/* Timeline line */}
                 <div className="absolute left-[15px] top-[24px] bottom-0 w-[2px] bg-black/10" />
@@ -253,14 +287,14 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* WhatIsMOS Section */}
-      <div ref={whatIsMOSRef}>
-        <WhatIsMOS />
+      {/* About Section */}
+      <div>
+        <About />
       </div>
 
       {/* MOS Ecosystem Section */}
       <div ref={ecosystemRef}>
-        <MOSEcosystem />
+        <MOSEcosystem ecosystemRef={ecosystemRef} />
       </div>
     </div>
   );
