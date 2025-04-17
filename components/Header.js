@@ -21,8 +21,18 @@ export default function Header() {
 
         {/* Header Buttons */}
         <div className="flex gap-3">
-          <ButtonHeader title="What is Mos?" />
-          <ButtonHeader title="Explore Offerings" />
+          <ButtonHeader
+            title="What is Mos?"
+            onClick={() => (window.location.href = "/")}
+          />
+          <ButtonHeader
+            title="MOS in Action"
+            onClick={() => (window.location.href = "/mos-in-action")}
+          />
+          <ButtonHeader
+            title="Explore Offerings"
+            onClick={() => (window.location.href = "/#ecosystem")}
+          />
         </div>
       </div>
     </header>
