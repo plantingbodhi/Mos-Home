@@ -3,38 +3,40 @@
 import Image from "next/image";
 import ButtonOutline from "./ButtonOutline";
 
-export default function About() {
+export default function About({ aboutRef }) {
   return (
-    <div className="bg-white max-w-7xl mx-auto px-8">
-      <h2 className="text-3xl font-bold text-center mb-4">
-        In Service of the Sacred
-      </h2>
-      <p className="text-lg text-center mb-8">
-        Offerings born from my own life of lessons — here to support yours.
-      </p>
+    <section ref={aboutRef} className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center mb-4">
+          In Service of the Sacred
+        </h2>
+        <p className="text-lg text-center mb-8">
+          Offerings born from my own life of lessons — here to support yours.
+        </p>
 
-      <div className="p-6">
-        <div className="border-2 border-black rounded-[32px] p-6">
-          {/* Top 2/3 Section */}
-          <div className="flex mb-8">
+        {/* Hi, I'm Bodhi Section */}
+        <div className="bg-white border-2 border-black rounded-[32px] overflow-hidden mb-16">
+          <div className="flex flex-col md:flex-row mb-8 p-6">
             {/* Left column - Video */}
-            <div className="w-1/3 pr-6">
-              <div className="border-2 border-black rounded-[32px] aspect-[9/16] w-full overflow-hidden">
+            <div className="w-full md:w-1/3 mb-6 md:mb-0 md:pr-6">
+              <div className="border-2 border-black rounded-[32px] w-full h-full overflow-hidden">
                 <Image
                   src="https://cwkokjxznczqdzrqfcpt.supabase.co/storage/v1/object/public/profile-photos//BodhiPlantingGIF.webp"
-                  alt="Bodhi Planting"
+                  alt="Bodhi"
                   width={400}
                   height={600}
                   className="w-full h-full object-cover"
+                  priority
+                  unoptimized
                 />
               </div>
             </div>
 
-            {/* Vertical divider */}
-            <div className="border-l-2 border-black mx-6"></div>
+            {/* Vertical divider - Hidden on mobile */}
+            <div className="hidden md:block border-l-2 border-black mx-6"></div>
 
             {/* Right column - Text */}
-            <div className="w-2/3 pl-6">
+            <div className="w-full md:w-2/3 md:pl-6">
               <div className="space-y-8">
                 <h3 className="text-2xl font-bold">Hi, I&apos;m Bodhi.</h3>
 
@@ -70,75 +72,51 @@ export default function About() {
                 <p className="text-lg">Let&apos;s walk it together.</p>
 
                 <div className="pt-4">
-                  <ButtonOutline title="Bodhi's story" />
+                  <ButtonOutline>Bodhi&apos;s story</ButtonOutline>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Bottom 1/3 Section */}
-          <div className="border-t-2 border-black pt-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 divide-x-2 divide-black">
-              {/* Gene Keys Guidance */}
-              <div className="space-y-4 px-8">
-                <div className="text-2xl">🧬</div>
-                <h4 className="text-xl font-bold">Gene Keys Guidance</h4>
-                <p className="text-lg">
-                  Discover your inner genius.
-                  <br />
-                  We&apos;ll explore your hologenetic profile together —
-                  unlocking the patterns, gifts, and shadows written into your
-                  DNA.
-                  <br />
-                  This is a contemplative, intuitive path back to who you truly
-                  are.
-                </p>
-                <button className="px-4 py-2 bg-transparent hover:bg-transparent text-black hover:text-[#d988d7] transition-colors">
-                  → Begin your contemplation
-                </button>
-              </div>
+        {/* Three Offerings Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          {/* Gene Keys Guidance */}
+          <div className="bg-white border-2 border-black rounded-[32px] p-4 sm:p-6 lg:p-8">
+            <div className="text-2xl mb-2">🔑</div>
+            <h3 className="text-xl font-bold mb-2">Gene Keys Guidance</h3>
+            <p className="text-muted-foreground mb-4">
+              Unlock your unique genetic blueprint and discover your life&apos;s
+              purpose through the wisdom of the Gene Keys.
+            </p>
+            <ButtonOutline>Learn More</ButtonOutline>
+          </div>
 
-              {/* 1:1 Guidance */}
-              <div className="space-y-4 px-8">
-                <div className="text-2xl">🌿</div>
-                <h4 className="text-xl font-bold">1:1 Guidance</h4>
-                <p className="text-lg">
-                  Support through transformation.
-                  <br />
-                  These are sacred conversations — held in presence, love, and
-                  clarity.
-                  <br />
-                  Whether you&apos;re in a threshold, a low, or a blooming, we
-                  walk the journey together.
-                </p>
-                <button className="px-4 py-2 bg-transparent hover:bg-transparent text-black hover:text-[#d988d7] transition-colors">
-                  → Book a session
-                </button>
-              </div>
+          {/* 1:1 Guidance */}
+          <div className="bg-white border-2 border-black rounded-[32px] p-4 sm:p-6 lg:p-8">
+            <div className="text-2xl mb-2">💫</div>
+            <h3 className="text-xl font-bold mb-2">1:1 Guidance</h3>
+            <p className="text-muted-foreground mb-4">
+              Personalized spiritual guidance and mentorship to support your
+              unique journey of awakening and transformation.
+            </p>
+            <ButtonOutline>Book Session</ButtonOutline>
+          </div>
 
-              {/* Live Events & Community Practice */}
-              <div className="space-y-4 px-8">
-                <div className="text-2xl">🕊️</div>
-                <h4 className="text-xl font-bold">
-                  Live Events & Community Practice
-                </h4>
-                <p className="text-lg">
-                  Rest into Sanctity.
-                  <br />
-                  Join me for meditations, movement, and honest presence in
-                  community.
-                  <br />
-                  Here we remember that we don&apos;t heal alone — we heal
-                  together.
-                </p>
-                <button className="px-4 py-2 bg-transparent hover:bg-transparent text-black hover:text-[#d988d7] transition-colors">
-                  → Join a practice
-                </button>
-              </div>
-            </div>
+          {/* Live Events & Community Practice */}
+          <div className="bg-white border-2 border-black rounded-[32px] p-4 sm:p-6 lg:p-8">
+            <div className="text-2xl mb-2">🌿</div>
+            <h3 className="text-xl font-bold mb-2">
+              Live Events & Community Practice
+            </h3>
+            <p className="text-muted-foreground mb-4">
+              Join our community for live events, workshops, and group practices
+              that deepen your connection to self and others.
+            </p>
+            <ButtonOutline>Join Community</ButtonOutline>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

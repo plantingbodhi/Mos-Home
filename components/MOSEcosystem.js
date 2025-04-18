@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function MOSEcosystem({ ecosystemRef }) {
   return (
@@ -101,6 +102,15 @@ export default function MOSEcosystem({ ecosystemRef }) {
         </div>
 
         <div className="mt-24 text-center mb-24">
+          <div className="max-w-md mx-auto border-2 border-black rounded-[32px] overflow-hidden mb-12">
+            <Image
+              src="https://cwkokjxznczqdzrqfcpt.supabase.co/storage/v1/object/public/website-images//Mos%20hero%20banner.jpg"
+              alt="MOS Hero Banner"
+              width={400}
+              height={200}
+              className="w-full h-auto"
+            />
+          </div>
           <h2 className="text-3xl font-bold mb-8">The Vision of MOS</h2>
           <p className="text-lg text-center mb-6">
             What if the world was built from the inside out?
