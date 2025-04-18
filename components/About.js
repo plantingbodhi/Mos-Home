@@ -79,6 +79,15 @@ export default function About({ aboutRef }) {
           </div>
         </div>
 
+        {/* Work with me Section */}
+        <div id="work-with-me" className="mb-16 text-center">
+          <h3 className="text-2xl font-bold mb-4">Work with me</h3>
+          <p className="text-lg">
+            Step into spaces designed for clarity, transformation, and real
+            connection.
+          </p>
+        </div>
+
         {/* Three Offerings Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {/* Gene Keys Guidance */}
@@ -89,7 +98,7 @@ export default function About({ aboutRef }) {
               Unlock your unique genetic blueprint and discover your life&apos;s
               purpose through the wisdom of the Gene Keys.
             </p>
-            <ButtonOutline>Learn More</ButtonOutline>
+            <ButtonOutline title="Coming Soon" />
           </div>
 
           {/* 1:1 Guidance */}
@@ -100,7 +109,7 @@ export default function About({ aboutRef }) {
               Personalized spiritual guidance and mentorship to support your
               unique journey of awakening and transformation.
             </p>
-            <ButtonOutline>Book Session</ButtonOutline>
+            <ButtonOutline title="Coming Soon" />
           </div>
 
           {/* Live Events & Community Practice */}
@@ -113,7 +122,7 @@ export default function About({ aboutRef }) {
               Join our community for live events, workshops, and group practices
               that deepen your connection to self and others.
             </p>
-            <ButtonOutline>Join Community</ButtonOutline>
+            <ButtonOutline title="Coming Soon" />
           </div>
         </div>
       </div>
