@@ -25,10 +25,11 @@ export default function WhatIsMOS() {
             </div>
             <div className="flex flex-col justify-center">
               <p className="text-lg mb-6">
-                You're not alone in what you&apos;re feeling. Something deep is
-                stirring, in the world and within you. We&apos;re living through
-                a collective remembering. Old systems are breaking. Truth is
-                rising. And many are waking up without a clear path to walk.
+                You&apos;re not alone in what you&apos;re feeling. Something
+                deep is stirring, in the world and within you. We&apos;re living
+                through a collective remembering. Old systems are breaking.
+                Truth is rising. And many are waking up without a clear path to
+                walk.
               </p>
               <p className="text-lg mb-6">
                 Mos is not a new idea. It&apos;s an ancient pattern, one that
