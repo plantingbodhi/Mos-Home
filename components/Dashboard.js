@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import ButtonOutline from "./ButtonOutline";
-import WhatIsMOS from "./WhatIsMOS";
 import About from "./About";
 import MOSEcosystem from "./MOSEcosystem";
 
@@ -68,6 +67,11 @@ export default function Dashboard() {
       {/* About Section */}
       <div className="mt-24" ref={aboutRef}>
         <About aboutRef={aboutRef} />
+      </div>
+
+      {/* MOS Ecosystem Section */}
+      <div className="pt-12">
+        <MOSEcosystem ecosystemRef={ecosystemRef} />
       </div>
     </div>
   );
