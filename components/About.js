@@ -14,9 +14,9 @@ export default function About({ aboutRef }) {
           Offerings born from my own life of lessons — here to support yours.
         </p>
 
-        {/* Hi, I'm Bodhi Section */}
-        <div className="bg-white border-2 border-black rounded-[32px] overflow-hidden mb-16">
-          <div className="flex flex-col md:flex-row mb-8 p-6">
+        <div className="bg-white border-2 border-black rounded-[32px] overflow-hidden">
+          {/* Hi, I'm Bodhi Section */}
+          <div className="flex flex-col md:flex-row p-6">
             {/* Left column - Video */}
             <div className="w-full md:w-1/3 mb-6 md:mb-0 md:pr-6">
               <div className="border-2 border-black rounded-[32px] w-full h-full overflow-hidden">
@@ -31,9 +31,6 @@ export default function About({ aboutRef }) {
                 />
               </div>
             </div>
-
-            {/* Vertical divider - Hidden on mobile */}
-            <div className="hidden md:block border-l-2 border-black mx-6"></div>
 
             {/* Right column - Text */}
             <div className="w-full md:w-2/3 md:pl-6">
@@ -77,52 +74,63 @@ export default function About({ aboutRef }) {
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Work with me Section */}
-        <div id="work-with-me" className="mb-16 text-center">
-          <h3 className="text-2xl font-bold mb-4">Work with me</h3>
-          <p className="text-lg">
-            Step into spaces designed for clarity, transformation, and real
-            connection.
-          </p>
-        </div>
+          {/* Dividing line */}
+          <div className="border-t-2 border-black pt-6 px-6"></div>
 
-        {/* Three Offerings Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-          {/* Gene Keys Guidance */}
-          <div className="bg-white border-2 border-black rounded-[32px] p-4 sm:p-6 lg:p-8">
-            <div className="text-2xl mb-2">🔑</div>
-            <h3 className="text-xl font-bold mb-2">Gene Keys Guidance</h3>
-            <p className="text-muted-foreground mb-4">
-              Unlock your unique genetic blueprint and discover your life&apos;s
-              purpose through the wisdom of the Gene Keys.
-            </p>
-            <ButtonOutline title="Coming Soon" />
-          </div>
-
-          {/* 1:1 Guidance */}
-          <div className="bg-white border-2 border-black rounded-[32px] p-4 sm:p-6 lg:p-8">
-            <div className="text-2xl mb-2">💫</div>
-            <h3 className="text-xl font-bold mb-2">1:1 Guidance</h3>
-            <p className="text-muted-foreground mb-4">
-              Personalized spiritual guidance and mentorship to support your
-              unique journey of awakening and transformation.
-            </p>
-            <ButtonOutline title="Coming Soon" />
-          </div>
-
-          {/* Live Events & Community Practice */}
-          <div className="bg-white border-2 border-black rounded-[32px] p-4 sm:p-6 lg:p-8">
-            <div className="text-2xl mb-2">🌿</div>
-            <h3 className="text-xl font-bold mb-2">
-              Live Events & Community Practice
+          {/* Work with me Section */}
+          <div className="p-6">
+            <h3 className="text-2xl font-bold text-center mb-4">
+              Work with me
             </h3>
-            <p className="text-muted-foreground mb-4">
-              Join our community for live events, workshops, and group practices
-              that deepen your connection to self and others.
+            <p className="text-lg text-center mb-8">
+              Step into spaces designed for clarity, transformation, and real
+              connection.
             </p>
-            <ButtonOutline title="Coming Soon" />
+          </div>
+
+          {/* Three Offerings Sections */}
+          <div className="pt-6 pb-16 px-6">
+            <div className="grid grid-cols-1 md:grid-cols-3">
+              {/* Gene Keys Guidance */}
+              <div className="text-center px-6 border-b-2 md:border-b-0 md:border-r-2 border-black pb-8 md:pb-0">
+                <div className="text-2xl mb-2">🔑</div>
+                <h3 className="text-xl font-bold mb-2">Gene Keys Guidance</h3>
+                <p className="text-muted-foreground mb-4">
+                  Unlock your unique genetic blueprint and discover your
+                  life&apos;s purpose through the wisdom of the Gene Keys.
+                </p>
+                <ButtonOutline title="Coming Soon" />
+              </div>
+
+              {/* 1:1 Guidance */}
+              <div className="text-center px-6 border-b-2 md:border-b-0 md:border-r-2 border-black pb-8 md:pb-0">
+                <div className="pt-8 md:pt-0">
+                  <div className="text-2xl mb-2">💫</div>
+                  <h3 className="text-xl font-bold mb-2">1:1 Guidance</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Personalized spiritual guidance and mentorship to support
+                    your unique journey of awakening and transformation.
+                  </p>
+                  <ButtonOutline title="Coming Soon" />
+                </div>
+              </div>
+
+              {/* Live Events & Community Practice */}
+              <div className="text-center px-6">
+                <div className="pt-8 md:pt-0">
+                  <div className="text-2xl mb-2">🌿</div>
+                  <h3 className="text-xl font-bold mb-2">
+                    Live Events & Community
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    Join our community for live events, workshops, and group
+                    practices that deepen your connection to self and others.
+                  </p>
+                  <ButtonOutline title="Coming Soon" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
