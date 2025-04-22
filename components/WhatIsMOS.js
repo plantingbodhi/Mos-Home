@@ -6,50 +6,36 @@ export default function WhatIsMOS() {
   return (
     <section className="pt-20 bg-white">
       <div className="max-w-6xl mx-auto px-8">
-        <h2 className="text-3xl font-bold text-center mb-4">What is Mos?</h2>
-        <p className="text-lg text-center mb-8">
-          A sacred system for remembering who you are.
-        </p>
-
         <div className="border-2 border-black rounded-[32px] p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
-            <div className="flex items-center justify-center">
-              <div className="w-80 h-80 relative">
-                <Image
-                  src="https://cwkokjxznczqdzrqfcpt.supabase.co/storage/v1/object/public/mos-icons//logo.png"
-                  alt="MOS Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col justify-center">
-              <p className="text-lg mb-6">
-                You&apos;re not alone in what you&apos;re feeling. Something
-                deep is stirring, in the world and within you. We&apos;re living
-                through a collective remembering. Old systems are breaking.
-                Truth is rising. And many are waking up without a clear path to
-                walk.
-              </p>
-              <p className="text-lg mb-6">
-                Mos is not a new idea. It&apos;s an ancient pattern, one that
-                has flowed through sacred teachings across time. It has many
-                names, and no name. Now, it&apos;s returned as a system for this
-                moment.
-              </p>
-              <p className="text-lg mb-6">
-                A way to see clearly. To live truthfully. To return to what
-                matters.
-              </p>
-              <p className="text-lg">
-                It won&apos;t give you answers, but it will help you listen.
-                It&apos;s both a map, and a mirror. And it begins where you are.
-              </p>
-            </div>
+          <h2 className="text-3xl font-bold text-center mb-4">What is MOS?</h2>
+          <p className="text-lg text-center mb-12">
+            A sacred system for remembering who you are.
+          </p>
+
+          <div className="mb-16">
+            <p className="text-lg text-center mb-6">
+              You&apos;re not alone in what you&apos;re feeling. Something deep
+              is stirring, in the world and within you. We&apos;re living
+              through a collective remembering. Old systems are breaking. Truth
+              is rising. And many are waking up without a clear path to walk.
+            </p>
+            <p className="text-lg text-center mb-6">
+              Mos is not a new idea. It&apos;s an ancient pattern, one that has
+              flowed through sacred teachings across time. It has many names,
+              and no name. Now, it&apos;s returned as a system for this moment.
+            </p>
+            <p className="text-lg text-center mb-6">
+              A way to see clearly. To live truthfully. To return to what
+              matters.
+            </p>
+            <p className="text-lg text-center">
+              It won&apos;t give you answers, but it will help you listen.
+              It&apos;s both a map, and a mirror. And it begins where you are.
+            </p>
           </div>
 
           <div className="border-t-2 border-black pt-6">
-            <p className="text-lg font-bold mb-4 text-center">MOS is a map.</p>
+            <p className="text-2xl font-bold mb-4 text-center">MOS is a map.</p>
             <p className="text-lg mb-8 text-center">
               A way to navigate your life through clarity, action, and love.
             </p>
@@ -103,9 +89,37 @@ export default function WhatIsMOS() {
               </div>
             </div>
 
-            <p className="text-lg text-center mt-8">
+            <p className="text-lg text-center mt-8 mb-12">
               It is a rhythm. A ritual. A system.
             </p>
+          </div>
+
+          <div className="border-t-2 border-black pt-6">
+            <h3 className="text-2xl font-bold text-center mb-4">
+              The Way of Mos
+            </h3>
+            <p className="text-lg text-center mb-8">
+              There&apos;s no one way to walk the Way.
+            </p>
+
+            <div className="space-y-8">
+              <p className="text-lg text-center">
+                Mos isn&apos;t a rigid method — it&apos;s a living system. You
+                can start with Mystery, move through Odyssey, or rest in
+                Sanctity. Or live all three in a single breath. Some come for
+                stillness. Some to create. Some to heal.
+              </p>
+
+              <p className="text-lg text-center">
+                Mos takes form — not just as an idea, but as something you can
+                use. A simple way to see where you are, and return to what
+                matters.
+              </p>
+
+              <p className="text-lg text-center">
+                It adapts to you. To your life, your season, your soul.
+              </p>
+            </div>
           </div>
         </div>
       </div>
