@@ -6,6 +6,7 @@ import WhatIsMOS from "@/components/WhatIsMOS";
 import Footer from "@/components/Footer";
 import VisionOfMOS from "@/components/VisionOfMOS";
 import MOSEcosystem from "@/components/MOSEcosystem";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-background">
+      <Hero />
       <WhatIsMOS />
       <Dashboard />
       <VisionOfMOS />

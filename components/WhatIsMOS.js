@@ -7,7 +7,7 @@ export default function WhatIsMOS() {
     <section className="pt-20 bg-white">
       <div className="max-w-6xl mx-auto px-8">
         <div className="border-2 border-black rounded-[32px] p-6">
-          <h2 className="text-3xl font-bold text-center mb-4">What is MOS?</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">What is Mos?</h2>
           <p className="text-lg text-center mb-12">
             A sacred system for remembering who you are.
           </p>
@@ -35,7 +35,7 @@ export default function WhatIsMOS() {
           </div>
 
           <div className="border-t-2 border-black pt-6">
-            <p className="text-2xl font-bold mb-4 text-center">MOS is a map.</p>
+            <p className="text-2xl font-bold mb-4 text-center">Mos is a map </p>
             <p className="text-lg mb-8 text-center">
               A way to navigate your life through clarity, action, and love.
             </p>
@@ -85,7 +85,9 @@ export default function WhatIsMOS() {
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Sanctity</h3>
-                <p className="text-lg">To remember that you are not alone.</p>
+                <p className="text-lg">
+                  The unity of all things, love and open heart.
+                </p>
               </div>
             </div>
 
@@ -96,7 +98,7 @@ export default function WhatIsMOS() {
 
           <div className="border-t-2 border-black pt-6">
             <h3 className="text-2xl font-bold text-center mb-4">
-              The Way of Mos
+              Mos is a way
             </h3>
             <p className="text-lg text-center mb-8">
               There&apos;s no one way to walk the Way.

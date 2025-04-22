@@ -7,6 +7,7 @@ import ButtonHeader from "./ButtonHeader";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isGuidanceOpen, setIsGuidanceOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-white">
@@ -32,6 +33,32 @@ export default function Header() {
             title="MOS in Action"
             onClick={() => (window.location.href = "/mos-in-action")}
           />
+          <div className="relative">
+            <ButtonHeader
+              title="Guidance"
+              onClick={() => setIsGuidanceOpen(!isGuidanceOpen)}
+            />
+            {isGuidanceOpen && (
+              <div className="absolute top-full left-0 mt-2 w-48 bg-white border-2 border-black rounded-lg shadow-lg">
+                <div className="py-2">
+                  <Link
+                    href="/gene-keys"
+                    className="block px-4 py-2 text-sm hover:bg-gray-100"
+                    onClick={() => setIsGuidanceOpen(false)}
+                  >
+                    Gene Keys
+                  </Link>
+                  <Link
+                    href="/mos-coaching"
+                    className="block px-4 py-2 text-sm hover:bg-gray-100"
+                    onClick={() => setIsGuidanceOpen(false)}
+                  >
+                    1:1 MOS
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
           <ButtonHeader
             title="Explore Offerings"
             onClick={() => (window.location.href = "/#work-with-me")}
@@ -99,12 +126,42 @@ export default function Header() {
                   }}
                 />
                 <ButtonHeader
-                  title="MOS in Action"
+                  title="Mos in Action"
                   onClick={() => {
                     window.location.href = "/mos-in-action";
                     setIsMenuOpen(false);
                   }}
                 />
+                <div className="space-y-2">
+                  <ButtonHeader
+                    title="Guidance"
+                    onClick={() => setIsGuidanceOpen(!isGuidanceOpen)}
+                  />
+                  {isGuidanceOpen && (
+                    <div className="pl-4 space-y-2">
+                      <Link
+                        href="/gene-keys"
+                        className="block text-sm hover:text-gray-600"
+                        onClick={() => {
+                          setIsGuidanceOpen(false);
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        Gene Keys
+                      </Link>
+                      <Link
+                        href="/mos-coaching"
+                        className="block text-sm hover:text-gray-600"
+                        onClick={() => {
+                          setIsGuidanceOpen(false);
+                          setIsMenuOpen(false);
+                        }}
+                      >
+                        1:1 MOS
+                      </Link>
+                    </div>
+                  )}
+                </div>
                 <ButtonHeader
                   title="Explore Offerings"
                   onClick={() => {
