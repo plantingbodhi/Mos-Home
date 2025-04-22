@@ -4,10 +4,12 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import ButtonOutline from "./ButtonOutline";
 import { getActivities, createTestActivities } from "@/libs/supabase";
+import { useRouter } from "next/navigation";
 
 export default function MOSInAction() {
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     async function initializeActivities() {
@@ -28,6 +30,10 @@ export default function MOSInAction() {
 
     initializeActivities();
   }, []);
+
+  const handleExploreOfferings = () => {
+    router.push("/?scrollTo=work-with-me");
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -65,7 +71,7 @@ export default function MOSInAction() {
                       }}
                     />
                     <ButtonOutline
-                      title="Explore Offerings"
+                      title="Explore Ecosystem"
                       onClick={() => {
                         window.location.href = "/#ecosystem";
                       }}
@@ -184,8 +190,8 @@ export default function MOSInAction() {
                           {new Date(activity.created_at).toLocaleString()}
                         </div>
                         <div className="bg-card rounded-[32px] p-6 border-2 border-black">
-                          <div className="flex gap-6">
-                            <div className="w-32 h-32 bg-muted rounded-[32px] overflow-hidden shrink-0 border-2 border-black">
+                          <div className="flex flex-col md:flex-row gap-6">
+                            <div className="w-full md:w-32 h-32 bg-muted rounded-[32px] overflow-hidden shrink-0 border-2 border-black">
                               <Image
                                 src={
                                   activity.image_url ||

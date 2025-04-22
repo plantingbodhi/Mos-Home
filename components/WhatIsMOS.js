@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function WhatIsMOS() {
   return (
-    <section className="pt-16 pb-24 bg-white">
-      <div className="max-w-7xl mx-auto px-8">
-        <h2 className="text-3xl font-bold text-center mb-4">What is MOS?</h2>
+    <section className="pt-20 bg-white">
+      <div className="max-w-6xl mx-auto px-8">
+        <h2 className="text-3xl font-bold text-center mb-4">What is Mos?</h2>
         <p className="text-lg text-center mb-8">
           A sacred system for remembering who you are.
         </p>
