@@ -17,8 +17,39 @@ export const viewport = {
 // This adds default SEO tags to all pages in our app.
 // You can override them in each page passing params to getSOTags() function.
 export const metadata = {
-  ...getSEOTags(),
-  title: "Mos",
+  ...getSEOTags({
+    title: "MOS - Mystery, Odyssey, Sanctity | Spiritual Coaching & Gene Keys",
+    description:
+      "Transform your life through the Way of MOS. Experience deep spiritual coaching, Gene Keys readings, and personalized guidance for your journey of self-discovery and growth.",
+    keywords: [
+      "spiritual coaching",
+      "Gene Keys",
+      "personal growth",
+      "self-discovery",
+      "spiritual guidance",
+      "MOS coaching",
+      "mystery",
+      "odyssey",
+      "sanctity",
+    ],
+    openGraph: {
+      title:
+        "MOS - Mystery, Odyssey, Sanctity | Spiritual Coaching & Gene Keys",
+      description:
+        "Transform your life through the Way of MOS. Experience deep spiritual coaching, Gene Keys readings, and personalized guidance for your journey of self-discovery and growth.",
+      type: "website",
+      locale: "en_US",
+      siteName: "MOS",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title:
+        "MOS - Mystery, Odyssey, Sanctity | Spiritual Coaching & Gene Keys",
+      description:
+        "Transform your life through the Way of MOS. Experience deep spiritual coaching, Gene Keys readings, and personalized guidance.",
+      creator: "@plantingbodhi",
+    },
+  }),
 };
 
 export default function RootLayout({ children }) {

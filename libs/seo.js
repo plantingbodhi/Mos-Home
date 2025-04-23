@@ -78,27 +78,88 @@ export const renderSchemaTags = () => {
       dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           "@context": "http://schema.org",
-          "@type": "SoftwareApplication",
-          name: config.appName,
-          description: config.appDescription,
-          image: `https://${config.domainName}/icon.png`,
+          "@type": "Organization",
+          name: "MOS",
+          description:
+            "Spiritual coaching and guidance through the Way of MOS - Mystery, Odyssey, Sanctity",
           url: `https://${config.domainName}/`,
-          author: {
+          logo: `https://${config.domainName}/icon.png`,
+          sameAs: [
+            "https://twitter.com/plantingbodhi",
+            // Add other social media profiles here
+          ],
+          founder: {
             "@type": "Person",
-            name: "Marc Lou",
-          },
-          datePublished: "2023-08-01",
-          applicationCategory: "EducationalApplication",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.8",
-            ratingCount: "12",
+            name: "Bodhi",
+            jobTitle: "Spiritual Coach",
+            description:
+              "Founder of MOS, guiding others through the Way of Mystery, Odyssey, and Sanctity",
+            image: `https://${config.domainName}/bodhi-profile.jpg`,
           },
           offers: [
             {
-              "@type": "Offer",
-              price: "9.00",
+              "@type": "Service",
+              name: "1:1 MOS Coaching",
+              description:
+                "Personalized spiritual coaching through the Way of MOS - Mystery, Odyssey, Sanctity",
+              provider: {
+                "@type": "Organization",
+                name: "MOS",
+              },
+              areaServed: "Worldwide",
+              serviceType: "Online Coaching",
+              price: "997",
               priceCurrency: "USD",
+              priceValidUntil: "2024-12-31",
+              availability: "https://schema.org/InStock",
+            },
+            {
+              "@type": "Service",
+              name: "Gene Keys Basic Reading",
+              description:
+                "90-minute Gene Keys reading with birth chart analysis and basic practices",
+              provider: {
+                "@type": "Organization",
+                name: "MOS",
+              },
+              areaServed: "Worldwide",
+              serviceType: "Online Reading",
+              price: "299",
+              priceCurrency: "USD",
+              priceValidUntil: "2024-12-31",
+              availability: "https://schema.org/InStock",
+            },
+            {
+              "@type": "Service",
+              name: "Gene Keys Deep Dive",
+              description:
+                "2-hour comprehensive Gene Keys reading with detailed profile analysis and shadow work guidance",
+              provider: {
+                "@type": "Organization",
+                name: "MOS",
+              },
+              areaServed: "Worldwide",
+              serviceType: "Online Reading",
+              price: "497",
+              priceCurrency: "USD",
+              priceValidUntil: "2024-12-31",
+              availability: "https://schema.org/InStock",
+            },
+            {
+              "@type": "Service",
+              name: "Gene Keys Ongoing Guidance",
+              description:
+                "3-month container with monthly sessions, progress tracking, and ongoing support",
+              provider: {
+                "@type": "Organization",
+                name: "MOS",
+              },
+              areaServed: "Worldwide",
+              serviceType: "Online Coaching",
+              price: "997",
+              priceCurrency: "USD",
+              priceValidUntil: "2024-12-31",
+              availability: "https://schema.org/InStock",
             },
           ],
         }),

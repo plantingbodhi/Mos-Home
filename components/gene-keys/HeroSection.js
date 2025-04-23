@@ -16,16 +16,15 @@ export default function HeroSection() {
         />
       </div>
       <h1 className="text-4xl sm:text-5xl font-bold mb-8">
-        &quot;You weren&apos;t born to fit into the world.
-        <br />
-        You were born to remember who you are.&quot;
+        &quot;Your genetic blueprint holds the keys to your highest
+        potential.&quot;
       </h1>
       <p className="text-xl mb-8">
-        A one-on-one coaching experience for those walking the Way —
+        Through the Gene Keys, we unlock the brilliance encoded in your DNA -
         <br />
-        From restlessness to stillness. From seeking to surrender.
+        and walk the contemplative path from shadow to gift, from
         <br />
-        From burnout to devotion.
+        confusion to clarity, from effort to trust.
       </p>
       <DiscoveryCallButton />
     </section>
