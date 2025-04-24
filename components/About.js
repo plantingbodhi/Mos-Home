@@ -68,11 +68,14 @@ export default function About({ aboutRef }) {
         </div>
 
         {/* Work with me Section with border */}
-        <div className="bg-white border-2 border-black rounded-[32px] overflow-hidden">
+        <div
+          id="work-with-me"
+          className="bg-white border-2 border-black rounded-[32px] overflow-hidden"
+        >
           {/* Work with me Section */}
           <div className="p-6">
             <h3 className="text-2xl font-bold text-center mb-4">
-              Work with me 1:1
+              Work With Me
             </h3>
             <p className="text-lg text-center mb-8">
               Step into spaces designed for clarity, transformation, and real
@@ -91,7 +94,10 @@ export default function About({ aboutRef }) {
                   Unlock your unique genetic blueprint and discover your
                   life&apos;s purpose through the wisdom of the Gene Keys.
                 </p>
-                <ButtonOutline title="Coming Soon" />
+                <ButtonOutline
+                  title="Learn More"
+                  onClick={() => (window.location.href = "/gene-keys")}
+                />
               </div>
 
               {/* 1:1 Guidance */}
@@ -105,7 +111,10 @@ export default function About({ aboutRef }) {
                     Personalized spiritual guidance and mentorship to support
                     your unique journey of awakening and transformation.
                   </p>
-                  <ButtonOutline title="Coming Soon" />
+                  <ButtonOutline
+                    title="Learn More"
+                    onClick={() => (window.location.href = "/mos-coaching")}
+                  />
                 </div>
               </div>
 

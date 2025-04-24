@@ -5,6 +5,7 @@ import WhatIsGeneKeys from "@/components/gene-keys/WhatIsGeneKeys";
 import WhatToExpect from "@/components/gene-keys/WhatToExpect";
 import EnergyExchange from "@/components/gene-keys/EnergyExchange";
 import DiscoveryCallButton from "@/components/mos-coaching/DiscoveryCallButton";
+import Footer from "@/components/Footer";
 import { getSEOTags } from "@/libs/seo";
 
 export const metadata = {
@@ -69,6 +70,7 @@ export default function GeneKeys() {
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   );
 }

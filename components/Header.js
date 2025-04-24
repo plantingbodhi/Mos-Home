@@ -12,7 +12,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-white">
       <div className="max-w-7xl mx-auto px-8 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+        <Link
+          href="/"
+          className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+        >
           <Image
             src="/images/logo 400.png"
             alt="MOS Dashboard"
@@ -21,17 +24,18 @@ export default function Header() {
             className="w-8 h-8"
           />
           <h1 className="text-xl font-bold">Mos</h1>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-3">
           <ButtonHeader
             title="What is Mos?"
-            onClick={() => (window.location.href = "/")}
-          />
-          <ButtonHeader
-            title="MOS in Action"
-            onClick={() => (window.location.href = "/mos-in-action")}
+            onClick={() => {
+              const element = document.getElementById("what-is-mos");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           />
           <div className="relative">
             <ButtonHeader
@@ -53,15 +57,20 @@ export default function Header() {
                     className="block px-4 py-2 text-sm hover:bg-gray-100"
                     onClick={() => setIsGuidanceOpen(false)}
                   >
-                    1:1 MOS
+                    Mos Coaching
                   </Link>
                 </div>
               </div>
             )}
           </div>
           <ButtonHeader
-            title="Explore Offerings"
-            onClick={() => (window.location.href = "/#work-with-me")}
+            title="Work With Me"
+            onClick={() => {
+              const element = document.getElementById("work-with-me");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           />
         </div>
 
@@ -121,14 +130,10 @@ export default function Header() {
                 <ButtonHeader
                   title="What is Mos?"
                   onClick={() => {
-                    window.location.href = "/";
-                    setIsMenuOpen(false);
-                  }}
-                />
-                <ButtonHeader
-                  title="Mos in Action"
-                  onClick={() => {
-                    window.location.href = "/mos-in-action";
+                    const element = document.getElementById("what-is-mos");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
                     setIsMenuOpen(false);
                   }}
                 />
@@ -163,9 +168,12 @@ export default function Header() {
                   )}
                 </div>
                 <ButtonHeader
-                  title="Explore Offerings"
+                  title="Work With Me"
                   onClick={() => {
-                    window.location.href = "/#work-with-me";
+                    const element = document.getElementById("work-with-me");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
                     setIsMenuOpen(false);
                   }}
                 />
