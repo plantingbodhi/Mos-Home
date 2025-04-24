@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import config from "@/config";
 
 const Hero = () => {
   return (
@@ -28,20 +27,22 @@ const Hero = () => {
           seekers, creators and healers walking the sacred path.
         </p>
 
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-md flex flex-col items-center lg:items-start">
           <h3 className="text-xl font-semibold mb-2">Letters on the way</h3>
-          <iframe
-            src="https://embeds.beehiiv.com/8057e0cb-db8a-457e-8045-e1b0d891591e?slim=true"
-            data-test-id="beehiiv-embed"
-            height="52"
-            frameBorder="0"
-            scrolling="no"
-            style={{
-              margin: 0,
-              borderRadius: "0px !important",
-              backgroundColor: "transparent",
-            }}
-          />
+          <div className="w-full flex justify-center lg:justify-start">
+            <iframe
+              src="https://embeds.beehiiv.com/8057e0cb-db8a-457e-8045-e1b0d891591e?slim=true"
+              data-test-id="beehiiv-embed"
+              height="52"
+              frameBorder="0"
+              scrolling="no"
+              style={{
+                margin: 0,
+                borderRadius: "0px !important",
+                backgroundColor: "transparent",
+              }}
+            />
+          </div>
           <p className="text-base text-gray-600 mt-4">
             Receive gentle guidance, tools, and reflections to walk your sacred
             path, straight to your inbox.

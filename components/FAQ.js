@@ -29,7 +29,7 @@ export const faqList = [
         • A rhythm to deepen your spiritual practice <br />
         • A framework for building aligned work in the world <br />
         • A space for connection, community, and healing <br />
-        MOS is not something you follow. It's something you live.
+        MOS is not something you follow. It&apos;s something you live.
       </div>
     ),
   },
