@@ -28,15 +28,12 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-3">
-          <ButtonHeader
-            title="What is Mos?"
-            onClick={() => {
-              const element = document.getElementById("what-is-mos");
-              if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          />
+          <Link href="/?#what-is-mos">
+            <ButtonHeader title="What is Mos?" />
+          </Link>
+          <Link href="/about">
+            <ButtonHeader title="About" />
+          </Link>
           <div className="relative">
             <ButtonHeader
               title="Guidance"
@@ -63,15 +60,9 @@ export default function Header() {
               </div>
             )}
           </div>
-          <ButtonHeader
-            title="Work With Me"
-            onClick={() => {
-              const element = document.getElementById("work-with-me");
-              if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          />
+          <Link href="/?#work-with-me">
+            <ButtonHeader title="Work With Me" />
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -127,16 +118,18 @@ export default function Header() {
               </div>
 
               <div className="space-y-4">
-                <ButtonHeader
-                  title="What is Mos?"
-                  onClick={() => {
-                    const element = document.getElementById("what-is-mos");
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
-                    setIsMenuOpen(false);
-                  }}
-                />
+                <Link href="/?#what-is-mos">
+                  <ButtonHeader
+                    title="What is Mos?"
+                    onClick={() => setIsMenuOpen(false)}
+                  />
+                </Link>
+                <Link href="/about">
+                  <ButtonHeader
+                    title="About"
+                    onClick={() => setIsMenuOpen(false)}
+                  />
+                </Link>
                 <div className="space-y-2">
                   <ButtonHeader
                     title="Guidance"
@@ -167,16 +160,12 @@ export default function Header() {
                     </div>
                   )}
                 </div>
-                <ButtonHeader
-                  title="Work With Me"
-                  onClick={() => {
-                    const element = document.getElementById("work-with-me");
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
-                    setIsMenuOpen(false);
-                  }}
-                />
+                <Link href="/?#work-with-me">
+                  <ButtonHeader
+                    title="Work With Me"
+                    onClick={() => setIsMenuOpen(false)}
+                  />
+                </Link>
               </div>
             </div>
           </div>

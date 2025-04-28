@@ -17,7 +17,10 @@ export default function Home() {
       if (hash) {
         const element = document.getElementById(hash.substring(1));
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          // Add a small delay to ensure the page has loaded
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: "smooth" });
+          }, 100);
         }
       }
     };

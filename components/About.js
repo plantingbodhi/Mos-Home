@@ -27,41 +27,33 @@ export default function About({ aboutRef }) {
           {/* Right column - Text */}
           <div className="w-full md:w-2/3 md:pl-6">
             <div className="space-y-8">
-              <h3 className="text-2xl font-bold">Hi, I&apos;m Bodhi.</h3>
-
-              <p className="text-lg">
-                This isn&apos;t just a framework I created — it&apos;s a path
-                that&apos;s taken me many years to walk:
+              <h3 className="text-2xl font-bold">Hi, I&apos;m Bodhi</h3>
+              <p className="text-lg text-gray-600">
+                A guide, creator, and student of the sacred path.
               </p>
 
               <p className="text-lg">
-                From depression to devotion.
-                <br />
-                From burnout to reverence.
-                <br />
-                From searching outward to remembering inward.
-              </p>
-
-              <p className="text-lg">Mos wasn&apos;t built in a boardroom.</p>
-
-              <p className="text-lg">
-                It grew through meditation, heartbreak, planting trees,
-                <br />
-                and years of building businesses.
+                My journey has taken me through depression, deep spiritual
+                awakening, love, loss, and rebuilding my life from the ground up
+                more than once.
               </p>
 
               <p className="text-lg">
-                This is my work.
-                <br />
-                My prayer.
-                <br />
-                My way of serving.
+                Through it all, I discovered that true freedom isn&apos;t about
+                escaping life&apos;s challenges — it&apos;s about meeting them
+                fully, and awakening the magnificence already within.
               </p>
 
-              <p className="text-lg">Let&apos;s walk it together.</p>
+              <p className="text-lg">
+                MOS is the living map born from this journey — a way to help
+                others remember who they are, and live from their deepest truth.
+              </p>
 
               <div className="pt-4">
-                <ButtonOutline title="Bodhi's story" />
+                <ButtonOutline
+                  title="Bodhi's story"
+                  onClick={() => (window.location.href = "/about")}
+                />
               </div>
             </div>
           </div>
